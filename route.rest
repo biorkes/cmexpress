@@ -1,0 +1,69 @@
+GET http://localhost:3000/subscribers
+
+###
+
+GET http://localhost:3000/subscribers/652175c2509327aac0c8cd92
+
+
+###
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Amazing Person",
+    "subscribedToChannel": "WebDevSimplified"
+}
+
+
+###
+
+DELETE http://localhost:3000/subscribers/652178e5642c06180e8bf145
+
+###
+
+PATCH http://localhost:3000/subscribers/652175c2509327aac0c8cd92
+Content-Type: application/json
+
+{
+    "name": "Amazing Person 666",
+    "subscribedToChannel": "Foliamo Channel"
+}
+
+// CHANNELS
+###
+GET http://localhost:3000/channels
+
+###
+
+GET http://localhost:3000/channels/65228f793238cbec3b74e51f
+
+
+###
+
+POST http://localhost:3000/channels
+Content-Type: application/json
+
+{
+    "name": "FB Paid",
+    "channelHash": "fb_{{$datetime iso8601}}",
+    "scripts": {
+        "header": "<script> $(document).ready(function(){console.log(23)})</script>",
+        "body":"<style>.span{color:red}</span>"
+    }
+}
+
+
+###
+
+DELETE http://localhost:3000/channels/65228f793238cbec3b74e51f
+
+###
+
+PATCH http://localhost:3000/channels/65228f903238cbec3b74e52b
+Content-Type: application/json
+
+{
+    "name": "FB Paid Robbie"
+}
+
